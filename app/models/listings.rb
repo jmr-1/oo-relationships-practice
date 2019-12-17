@@ -16,5 +16,35 @@ class Listings
         return @@all
     end 
 
-    
+    def trips #returns all trip objects with .listing attribute 
+
+        return Trips.all.select {|trip| trip.listing == self }
+    end 
+
+    def guests
+
+
+        #array only includes the guests and drops the listing portion 
+        return self.trips.map {|listing| listing.guest }
+    end 
+
+    def trip_count
+
+        #uses trips helper method and counts the number of objects 
+        return self.trips.count 
+    end 
+
+    def self.find_all_by_city(city)
+
+        #note: city is a string 
+
+        return Listings.all.select {|listing| listing.city == city}
+    end 
+
+    def self.most_popular
+
+    end 
+
+
+
 end 

@@ -1,6 +1,6 @@
 class Trips 
 
-    attr_reader :guest, :listing
+    attr_accessor :guest, :listing
     @@all = []
 
     def initialize(guest, listing)

@@ -1,12 +1,17 @@
 class Guests 
 
-    attr_accessor :name, :trip 
+    attr_accessor :name
     @@all = []
 
-    def initialize(name, trip)
+    def initialize(name)
 
-        @name, @trip = name, trip 
+        @name = name 
         @@all << self 
     end 
     
+    def self.all
+
+        return @@all
+    end 
+
 end 
