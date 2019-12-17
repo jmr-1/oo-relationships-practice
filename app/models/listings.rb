@@ -43,12 +43,12 @@ class Listings
 
     def self.most_popular #return listing with most trips 
 
+        #note: does not work well with ties 
         Listings.all.max_by do |listing|
 
             listing.trip_count 
             
         end 
-        #self.all.max_by do |listing|
     end 
 
 
