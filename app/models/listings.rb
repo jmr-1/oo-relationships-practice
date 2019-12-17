@@ -41,8 +41,14 @@ class Listings
         return Listings.all.select {|listing| listing.city == city}
     end 
 
-    def self.most_popular
+    def self.most_popular #return listing with most trips 
 
+        Listings.all.max_by do |listing|
+
+            listing.trip_count 
+            
+        end 
+        #self.all.max_by do |listing|
     end 
 
 
